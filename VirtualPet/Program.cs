@@ -5,7 +5,7 @@ namespace VirtualPet
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string nameInput;
             string speciesInput;
@@ -16,6 +16,15 @@ namespace VirtualPet
             Console.WriteLine("Enter your pet's species here:");
             speciesInput = Console.ReadLine();
             FirstPet myPet = new FirstPet(nameInput, speciesInput);
+
+            Console.WriteLine("Main Menu:");
+            Console.WriteLine("1- View Pet info");
+            Console.WriteLine("2- View Pet status");
+            Console.WriteLine("3- Feed Pet");
+            Console.WriteLine("4- Play With Pet");
+            Console.WriteLine("5- Take Pet to Doctor");
+            Console.WriteLine("6- Quit");
+            Console.WriteLine("Press a number to choose a task.");
         }
 
     }
