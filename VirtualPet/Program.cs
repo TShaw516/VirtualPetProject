@@ -9,6 +9,7 @@ namespace VirtualPet
         {
             string nameInput;
             string speciesInput;
+            string userSelection;
             
             Console.WriteLine("Welcome to the shelter. <insert main menu text here when ready>");
             Console.WriteLine("Enter your pet's name here:");
@@ -17,14 +18,22 @@ namespace VirtualPet
             speciesInput = Console.ReadLine();
             FirstPet myPet = new FirstPet(nameInput, speciesInput);
 
-            Console.WriteLine("Main Menu:");
-            Console.WriteLine("1- View Pet info");
-            Console.WriteLine("2- View Pet status");
-            Console.WriteLine("3- Feed Pet");
-            Console.WriteLine("4- Play With Pet");
-            Console.WriteLine("5- Take Pet to Doctor");
-            Console.WriteLine("6- Quit");
-            Console.WriteLine("Press a number to choose a task.");
+            do
+            {
+                Console.WriteLine("Main Menu:");
+                Console.WriteLine("1- View Pet info");
+                Console.WriteLine("2- View Pet status");
+                Console.WriteLine("3- Feed Pet");
+                Console.WriteLine("4- Play With Pet");
+                Console.WriteLine("5- Take Pet to Doctor");
+                Console.WriteLine("6- Quit");
+                Console.WriteLine("Press a number to choose a task.");
+
+                userSelection = Console.ReadLine();
+
+            } while (userSelection != "6");
+            
+
         }
 
     }
