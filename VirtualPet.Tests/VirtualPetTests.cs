@@ -57,5 +57,13 @@ namespace VirtualPet.Tests
             myPet.Hunger = 42;
             Assert.Equal(42, myPet.Hunger);
         }
+
+        [Fact]
+        public void Initial_Pet_Hunger_Is_10()
+        {
+            var myPet = new FirstPet();
+            myPet.Hunger = 42;
+            Assert.Equal(10, myPet.Hunger);
+        }
     }
 }

@@ -40,7 +40,27 @@ namespace VirtualPet
                         Console.WriteLine("Press any key to return to the Main Menu.");
                         Console.ReadKey();
                         break;
-                        
+
+                    case "2":
+                        Console.WriteLine("Here is your pet status:");
+                        Console.WriteLine(myPet.Hunger);
+                        Console.WriteLine(myPet.Boredom);
+                        break;
+
+                    case "3":
+                        Console.WriteLine("You just fed your pet one bowl of food.");
+                        myPet.Hunger = myPet.Hunger - 10;
+                        break;
+
+                    case "4":
+                        Console.WriteLine("You just played with your pet!");
+                        myPet.Boredom = myPet.Boredom - 10;
+                        break;
+
+                    case "5":
+                        Console.WriteLine("You took your pet to the vet, yay!");
+                        myPet.Health = myPet.Health + 10;
+                        break;
                 }
             } while (userSelection != "6");
             

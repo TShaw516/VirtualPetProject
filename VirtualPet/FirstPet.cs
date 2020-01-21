@@ -25,10 +25,12 @@ namespace VirtualPet
 
         public int Hunger
         {
-            get { return this.petHunger; }
+            get { return this.petHunger = 10; }
             set { this.petHunger = value; }
         }
+        public int Health { get; set; }
 
+        public int Boredom { get; set; }
         public FirstPet()
         {
             
