@@ -9,7 +9,7 @@ namespace VirtualPet
         //Define Variables
         private string petName;
         private string petSpecies;
-        private int petHunger;
+        private int hunger;
 
         public string PetName 
         {
@@ -25,12 +25,13 @@ namespace VirtualPet
 
         public int Hunger
         {
-            get { return this.petHunger = 10; }
-            set { this.petHunger = value; }
+            get { return this.hunger; }
+            set { this.hunger = value; }
         }
         public int Health { get; set; }
 
         public int Boredom { get; set; }
+        
         public FirstPet()
         {
             
@@ -39,6 +40,7 @@ namespace VirtualPet
         {
             PetName = petName;
             PetSpecies = petSpecies;
+            Hunger = 10;
         }
     }
 }

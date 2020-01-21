@@ -11,32 +11,32 @@ namespace VirtualPet
             string speciesInput;
             string userSelection;
             
-            Console.WriteLine("Welcome to the shelter. <insert main menu text here when ready>");
-            Console.WriteLine("Enter your pet's name here:");
+            Console.WriteLine("Welcome to the shelter, the first pet has arrived.");
+            Console.WriteLine("What is this pet's name?");
             nameInput = Console.ReadLine();
-            Console.WriteLine("Enter your pet's species here:");
+            Console.WriteLine("What species is this pet?");
             speciesInput = Console.ReadLine();
             FirstPet myPet = new FirstPet(nameInput, speciesInput);
 
             do
             {
                 Console.WriteLine("Main Menu:");
-                Console.WriteLine("1- View Pet info");
-                Console.WriteLine("2- View Pet status");
+                Console.WriteLine("1- View Pet Info");
+                Console.WriteLine("2- View Pet Status");
                 Console.WriteLine("3- Feed Pet");
                 Console.WriteLine("4- Play With Pet");
                 Console.WriteLine("5- Take Pet to Doctor");
                 Console.WriteLine("6- Quit");
-                Console.WriteLine("Press a number to choose a task.");
+                Console.WriteLine("Select a number to perform an activity!");
 
                 userSelection = Console.ReadLine();
 
                 switch (userSelection)
                 {
                     case "1":
-                        Console.WriteLine("Here is your pet's name and species:" );
-                        Console.WriteLine(myPet.PetName + ", ");
-                        Console.WriteLine(myPet.PetSpecies);
+                        Console.WriteLine("Your pet's name is: ");
+                        Console.WriteLine(myPet.PetName);
+                        Console.WriteLine("and this pet is a " + myPet.PetSpecies);
                         Console.WriteLine("Press any key to return to the Main Menu.");
                         Console.ReadKey();
                         break;
@@ -45,6 +45,7 @@ namespace VirtualPet
                         Console.WriteLine("Here is your pet status:");
                         Console.WriteLine(myPet.Hunger);
                         Console.WriteLine(myPet.Boredom);
+                        Console.WriteLine(myPet.Health);
                         Console.ReadKey();
                         break;
 
