@@ -31,6 +31,17 @@ namespace VirtualPet
 
                 userSelection = Console.ReadLine();
 
+                switch (userSelection)
+                {
+                    case "1":
+                        Console.WriteLine("Here is your pet's name and species:" );
+                        Console.WriteLine(myPet.PetName + ", ");
+                        Console.WriteLine(myPet.PetSpecies);
+                        Console.WriteLine("Press any key to return to the Main Menu.");
+                        Console.ReadKey();
+                        break;
+                        
+                }
             } while (userSelection != "6");
             
 
