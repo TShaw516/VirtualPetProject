@@ -6,6 +6,12 @@ namespace VirtualPet
 {
     class VirtualPetShelter
     {
+        public VirtualPetShelter()
+        {
 
+        }
+
+
+       
     }
 }

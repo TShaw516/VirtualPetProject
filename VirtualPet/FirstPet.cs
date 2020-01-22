@@ -42,10 +42,10 @@ namespace VirtualPet
             get { return this.health; }
             set { this.health = value; }
         }
-        
+
         public FirstPet()
         {
-            
+
         }
         public FirstPet(string petName, string petSpecies)
         {
@@ -55,5 +55,20 @@ namespace VirtualPet
             Boredom = 0;
             Health = 10;
         }
+
+        public void AddPet()
+        {
+
+            Console.WriteLine("Welcome to the shelter, the first pet has arrived.");
+            Console.WriteLine("What is this pet's name?");
+            string nameInput = Console.ReadLine();
+            Console.WriteLine("What species is this pet?");
+            string speciesInput = Console.ReadLine();
+            // FirstPet myPet = new FirstPet(nameInput, speciesInput);
+            PetName = nameInput;
+            PetSpecies = speciesInput;
+            Console.WriteLine("Press any key to return to the Main Menu.");
+        }
     }
 }
+

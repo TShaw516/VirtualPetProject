@@ -5,31 +5,7 @@ namespace VirtualPet.Tests
 {
     public class VirtualPetTests
     {
-        /*[Fact]
-        public void PetCreation_Works()
-        {
-            //Arrange
-            FirstPet myPet = new FirstPet();
 
-            //Act
-            //Assert
-            
-        }
-
-        [Fact]
-        public void Pet_CanBeNamed()
-        {
-            // Arrange
-            string petName;
-            string petSpecies;
-            //FirstPet myPet = new FirstPet(petName, petSpecies);
-
-            // Act
-
-
-            // Assert
-            //Assert.Equal(nameInput, myPet.petName);
-        }*/
 
         [Fact]
         public void Can_Create_Pet_Instance()
