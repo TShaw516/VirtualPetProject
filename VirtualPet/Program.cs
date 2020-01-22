@@ -39,32 +39,37 @@ namespace VirtualPet
                         Console.WriteLine("and this pet is a " + myPet.PetSpecies);
                         Console.WriteLine("Press any key to return to the Main Menu.");
                         Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "2":
                         Console.WriteLine("Here is your pet status:");
-                        Console.WriteLine(myPet.Hunger);
-                        Console.WriteLine(myPet.Boredom);
-                        Console.WriteLine(myPet.Health);
+                        Console.WriteLine("Your pet's hunger level is: " + myPet.Hunger);
+                        Console.WriteLine("Your pet's boredom level is: " + myPet.Boredom);
+                        Console.WriteLine("Your pet's health level is: " + myPet.Health);
                         Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "3":
                         Console.WriteLine("You just fed your pet one bowl of food.");
                         myPet.Hunger = myPet.Hunger - 10;
                         Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "4":
                         Console.WriteLine("You just played with your pet!");
                         myPet.Boredom = myPet.Boredom - 10;
                         Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "5":
                         Console.WriteLine("You took your pet to the vet, yay!");
                         myPet.Health = myPet.Health + 10;
                         Console.ReadKey();
+                        Console.Clear();
                         break;
                 }
             } while (userSelection != "6");

@@ -10,8 +10,10 @@ namespace VirtualPet
         private string petName;
         private string petSpecies;
         private int hunger;
+        private int boredom;
+        private int health;
 
-        public string PetName 
+        public string PetName
         {
             get { return this.petName; }
             set { this.petName = value; }
@@ -28,9 +30,18 @@ namespace VirtualPet
             get { return this.hunger; }
             set { this.hunger = value; }
         }
-        public int Health { get; set; }
 
-        public int Boredom { get; set; }
+        public int Boredom
+        {
+            get { return this.boredom; }
+            set { this.boredom = value; }
+        }
+
+        public int Health
+        {
+            get { return this.health; }
+            set { this.health = value; }
+        }
         
         public FirstPet()
         {
@@ -40,7 +51,9 @@ namespace VirtualPet
         {
             PetName = petName;
             PetSpecies = petSpecies;
-            Hunger = 10;
+            Hunger = 0;
+            Boredom = 0;
+            Health = 10;
         }
     }
 }
