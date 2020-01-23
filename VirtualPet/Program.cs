@@ -9,6 +9,7 @@ namespace VirtualPet
         {
             string userSelection;
             FirstPet myPet = new FirstPet();
+            VirtualPetShelter myShelter = new VirtualPetShelter();
 
             do
             {
@@ -19,6 +20,7 @@ namespace VirtualPet
                 {
                     case "1":
                         myPet.AddPet();
+                        myShelter.AddPetToShelter(myPet);
                         break;
 
                     case "2":

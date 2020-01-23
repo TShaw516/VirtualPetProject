@@ -6,25 +6,13 @@ namespace VirtualPet
 {
     class VirtualPetShelter
     {
-        string num;
+        List<FirstPet> petsInShelter = new List<FirstPet>();
         public VirtualPetShelter()
+        { 
+        }
+        public void AddPetToShelter(FirstPet pet)
         {
-            static void AssignPetID(int num)
-            {
-                int petID = 1; petID++;
-            }
-            string userSelection = Console.ReadLine();
-            // make pet shelter 
-            do
-            {
-                switch (userSelection)
-                {
-                    case num:
-                        AssignPetID();
-                        break;
-                }
-            }
-            while (userSelection != "exit");
+            petsInShelter.Add(pet);
         }
     }
 }

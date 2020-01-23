@@ -68,7 +68,7 @@ namespace VirtualPet
         public void AddPet()
         {
 
-            Console.WriteLine("Welcome to the shelter, the first pet has arrived.");
+            Console.WriteLine("Welcome to the shelter, a new pet has arrived.");
             Console.WriteLine("What is this pet's name?");
             string nameInput = Console.ReadLine();
             Console.WriteLine("What species is this pet?");
