@@ -45,15 +45,24 @@ namespace VirtualPet
 
         public FirstPet()
         {
-
-        }
-        public FirstPet(string petName, string petSpecies)
-        {
             PetName = petName;
             PetSpecies = petSpecies;
             Hunger = 0;
             Boredom = 0;
             Health = 10;
+        }
+
+        public void PetMenu()
+        {
+            Console.WriteLine("Main Menu:");
+            Console.WriteLine("1- Add a Pet to the Shelter");
+            Console.WriteLine("2- View Pet Info");
+            Console.WriteLine("3- View Pet Status");
+            Console.WriteLine("4- Feed Pet");
+            Console.WriteLine("5- Play With Pet");
+            Console.WriteLine("6- Take Pet to Doctor");
+            Console.WriteLine("7- Quit");
+            Console.WriteLine("Select a number to perform an activity!");
         }
 
         public void AddPet()
@@ -64,10 +73,59 @@ namespace VirtualPet
             string nameInput = Console.ReadLine();
             Console.WriteLine("What species is this pet?");
             string speciesInput = Console.ReadLine();
-            // FirstPet myPet = new FirstPet(nameInput, speciesInput);
             PetName = nameInput;
             PetSpecies = speciesInput;
             Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        public void PetInfo()
+        {
+            Console.WriteLine("Your pet's name is: ");
+            Console.WriteLine(PetName);
+            Console.WriteLine("and this pet is a " + PetSpecies);
+            Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        public void PetStatus()
+        {
+            Console.WriteLine("Here is your pet status:");
+            Console.WriteLine("Your pet's hunger level is: " + hunger);
+            Console.WriteLine("Your pet's boredom level is: " + boredom);
+            Console.WriteLine("Your pet's health level is: " + health);
+            Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        public void FeedPet()
+        {
+            Console.WriteLine("You just fed your pet one bowl of food.");
+            hunger -= 10;
+            Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        public void PlayWithPet()
+        {
+            Console.WriteLine("You just played with your pet!");
+            boredom -= 10;
+            Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        public void TakeToDoctor()
+        {
+            Console.WriteLine("You took your pet to the vet, yay!");
+            health += 10;
+            Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
