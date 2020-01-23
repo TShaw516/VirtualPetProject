@@ -48,9 +48,27 @@ namespace VirtualPet.Tests
         }
 
         [Fact]
+        public void Pet_Boredom_Decreases_By_10()
+        {
+            var myPet = new FirstPet();
+            myPet.Boredom = 10;
+            myPet.PlayWithPet();
+            Assert.Equal(0, myPet.Boredom);
+        }
+
+        [Fact]
         public void Initial_Pet_Health_Is_10()
         {
             var myPet = new FirstPet();
+            Assert.Equal(10, myPet.Health);
+        }
+
+        [Fact]
+        public void Pet_Health_Increases_By_10()
+        {
+            var myPet = new FirstPet();
+            myPet.Health = 0;
+            myPet.TakeToDoctor();
             Assert.Equal(10, myPet.Health);
         }
 

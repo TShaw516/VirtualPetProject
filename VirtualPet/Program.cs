@@ -23,22 +23,32 @@ namespace VirtualPet
 
                     case "2":
                         myPet.PetInfo();
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "3":
                         myPet.PetStatus();
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "4":
                         myPet.FeedPet();
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "5":
                         myPet.PlayWithPet();
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "6":
                         myPet.TakeToDoctor();
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                 }
             } while (userSelection != "7");

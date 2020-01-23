@@ -86,8 +86,7 @@ namespace VirtualPet
             Console.WriteLine(PetName);
             Console.WriteLine("and this pet is a " + PetSpecies);
             Console.WriteLine("Press any key to return to the Main Menu.");
-            Console.ReadKey();
-            Console.Clear();
+         
         }
 
         public void PetStatus()
@@ -97,8 +96,7 @@ namespace VirtualPet
             Console.WriteLine("Your pet's boredom level is: " + boredom);
             Console.WriteLine("Your pet's health level is: " + health);
             Console.WriteLine("Press any key to return to the Main Menu.");
-            Console.ReadKey();
-            Console.Clear();
+          
         }
 
         public void FeedPet()
@@ -106,8 +104,6 @@ namespace VirtualPet
             Console.WriteLine("You just fed your pet one bowl of food.");
             hunger -= 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
-            Console.ReadKey();
-            Console.Clear();
         }
 
         public void PlayWithPet()
@@ -115,8 +111,7 @@ namespace VirtualPet
             Console.WriteLine("You just played with your pet!");
             boredom -= 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
-            Console.ReadKey();
-            Console.Clear();
+           
         }
 
         public void TakeToDoctor()
@@ -124,8 +119,7 @@ namespace VirtualPet
             Console.WriteLine("You took your pet to the vet, yay!");
             health += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
-            Console.ReadKey();
-            Console.Clear();
+           
         }
     }
 }
