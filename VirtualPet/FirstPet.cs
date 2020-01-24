@@ -67,7 +67,6 @@ namespace VirtualPet
 
         public void AddPet()
         {
-
             Console.WriteLine("Welcome to the shelter, a new pet has arrived.");
             Console.WriteLine("What is this pet's name?");
             string nameInput = Console.ReadLine();
@@ -75,9 +74,6 @@ namespace VirtualPet
             string speciesInput = Console.ReadLine();
             PetName = nameInput;
             PetSpecies = speciesInput;
-            Console.WriteLine("Press any key to return to the Main Menu.");
-            Console.ReadKey();
-            Console.Clear();
         }
 
         public void PetInfo()
@@ -94,8 +90,6 @@ namespace VirtualPet
         {
             Console.WriteLine("Here is your pet status:");
             Console.WriteLine($"Pet Name: {PetName} | Hunger Level: {Hunger} | Boredom Level: {Boredom} | Health Level: {Health}");
-            Console.WriteLine("Press any key to return to the Main Menu.");
-          
         }
 
         public void FeedPet()
@@ -110,7 +104,6 @@ namespace VirtualPet
             Console.WriteLine("You just played with your pet!");
             boredom -= 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
-           
         }
 
         public void TakeToDoctor()
@@ -118,7 +111,6 @@ namespace VirtualPet
             Console.WriteLine("You took your pet to the vet, yay!");
             health += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
-           
         }
     }
 }

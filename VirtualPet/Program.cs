@@ -11,6 +11,11 @@ namespace VirtualPet
             FirstPet myPet = new FirstPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
 
+            ////do 
+            //{
+            //    Console.WriteLine("Please Press 1 to interact with a single pet or Press 2 to interact with all pets");
+            //}
+
             do
             {
                 myPet.PetMenu();
@@ -31,22 +36,22 @@ namespace VirtualPet
                         break;
 
                     case "3":
-                        myPet.PetStatus();
+                        myShelter.ShowAllPetsStatus();
                         ScreenClear();
                         break;
 
                     case "4":
-                        myPet.FeedPet();
+                        myShelter.FeedAllPets();
                         ScreenClear();
                         break;
 
                     case "5":
-                        myPet.PlayWithPet();
+                        myShelter.PlayWithAllPets();
                         ScreenClear();
                         break;
 
                     case "6":
-                        myPet.TakeToDoctor();
+                        myShelter.TakeAllPetsToDoctor();
                         ScreenClear();
                         break;
                 }

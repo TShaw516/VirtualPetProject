@@ -27,5 +27,37 @@ namespace VirtualPet
                 petsInShelter[i].PetInfo();
             }
         }
+
+        public void ShowAllPetsStatus()
+        {
+            for (int i = 0; i < petsInShelter.Count; i++)
+            {
+                petsInShelter[i].PetStatus();
+            }
+        }
+
+        public void FeedAllPets()
+        {
+            for (int i = 0; i < petsInShelter.Count; i++)
+            {
+                petsInShelter[i].FeedPet();
+            }
+        }
+
+        public void PlayWithAllPets()
+        {
+            for (int i = 0; i < petsInShelter.Count; i++)
+            {
+                petsInShelter[i].PlayWithPet();
+            }
+        }
+
+        public void TakeAllPetsToDoctor()
+        {
+            for (int i = 0; i < petsInShelter.Count; i++)
+            {
+                petsInShelter[i].TakeToDoctor();
+            }
+        }
     }
 }
