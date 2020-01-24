@@ -20,12 +20,13 @@ namespace VirtualPet
                 switch (userSelection)
                 {
                     case "1":
+                        myPet = new FirstPet();
                         myPet.AddPet();
                         myShelter.AddPetToShelter(myPet);
                         break;
 
                     case "2":
-                        myPet.PetInfo();
+                        myPet.PetInfo();                       
                         Console.ReadKey();
                         Console.Clear();
                         break;

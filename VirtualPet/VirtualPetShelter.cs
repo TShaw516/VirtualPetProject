@@ -7,12 +7,22 @@ namespace VirtualPet
     class VirtualPetShelter
     {
         List<FirstPet> petsInShelter = new List<FirstPet>();
+        
+
         public VirtualPetShelter()
         {
+           
         }
+
         public void AddPetToShelter(FirstPet pet)
         {
             petsInShelter.Add(pet);
-        }
+
+        }    
+
+        
+           
+           
+
     }
 }

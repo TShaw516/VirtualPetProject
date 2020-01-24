@@ -82,7 +82,7 @@ namespace VirtualPet
 
         public void PetInfo()
         {
-            Console.WriteLine($"{PetName} | {PetSpecies} | {Hunger} | {Boredom} | {Health}");
+            Console.WriteLine($"Name: {PetName} | Species: {PetSpecies}");
             /*Console.WriteLine("Your pet's name is: ");
             Console.WriteLine(PetName);
             Console.WriteLine("and this pet is a " + PetSpecies);*/
@@ -90,12 +90,17 @@ namespace VirtualPet
          
         }
 
+        public void ShelterContents()
+        {
+            FirstPet petsInShelter = new FirstPet();
+            
+
+        }
+
         public void PetStatus()
         {
             Console.WriteLine("Here is your pet status:");
-            Console.WriteLine("Your pet's hunger level is: " + hunger);
-            Console.WriteLine("Your pet's boredom level is: " + boredom);
-            Console.WriteLine("Your pet's health level is: " + health);
+            Console.WriteLine($"Pet Name: {PetName} | Hunger Level: {Hunger} | Boredom Level: {Boredom} | Health Level: {Health}");
             Console.WriteLine("Press any key to return to the Main Menu.");
           
         }
