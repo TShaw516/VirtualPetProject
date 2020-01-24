@@ -11,8 +11,6 @@ namespace VirtualPet
             FirstPet myPet = new FirstPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
 
-            
-
             do
             {
                 myPet.PetMenu();
@@ -24,6 +22,7 @@ namespace VirtualPet
                         myPet = new FirstPet();
                         myPet.AddPet();
                         myShelter.AddPetToShelter(myPet);
+                        ScreenClear();
                         break;
 
                     case "2":
@@ -33,31 +32,25 @@ namespace VirtualPet
 
                     case "3":
                         myPet.PetStatus();
-                        Console.ReadKey();
-                        Console.Clear();
+                        ScreenClear();
                         break;
 
                     case "4":
                         myPet.FeedPet();
-                        Console.ReadKey();
-                        Console.Clear();
+                        ScreenClear();
                         break;
 
                     case "5":
                         myPet.PlayWithPet();
-                        Console.ReadKey();
-                        Console.Clear();
+                        ScreenClear();
                         break;
 
                     case "6":
                         myPet.TakeToDoctor();
-                        Console.ReadKey();
-                        Console.Clear();
+                        ScreenClear();
                         break;
                 }
             } while (userSelection != "7");
-            
-
         }
 
         static void ScreenClear()
