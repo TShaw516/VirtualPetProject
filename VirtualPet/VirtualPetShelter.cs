@@ -20,9 +20,12 @@ namespace VirtualPet
 
         }    
 
-        
-           
-           
-
+        public void ShowAllPetsInfo()
+        {
+            for (int i = 0; i < petsInShelter.Count; i++)
+            {
+                petsInShelter[i].PetInfo();
+            }
+        }
     }
 }

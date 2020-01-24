@@ -9,8 +9,9 @@ namespace VirtualPet
         {
             string userSelection;
             FirstPet myPet = new FirstPet();
-            myPet.ToString();
             VirtualPetShelter myShelter = new VirtualPetShelter();
+
+            
 
             do
             {
@@ -26,9 +27,8 @@ namespace VirtualPet
                         break;
 
                     case "2":
-                        myPet.PetInfo();                       
-                        Console.ReadKey();
-                        Console.Clear();
+                        myShelter.ShowAllPetsInfo();
+                        ScreenClear();
                         break;
 
                     case "3":
@@ -60,5 +60,11 @@ namespace VirtualPet
 
         }
 
+        static void ScreenClear()
+        {
+            Console.WriteLine("Press any key to return to the Main Menu!");
+            Console.ReadKey();
+            Console.Clear();
+        }
     }
 }
