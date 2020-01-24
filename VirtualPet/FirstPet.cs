@@ -82,9 +82,10 @@ namespace VirtualPet
 
         public void PetInfo()
         {
-            Console.WriteLine("Your pet's name is: ");
+            Console.WriteLine($"{PetName} | {PetSpecies} | {Hunger} | {Boredom} | {Health}");
+            /*Console.WriteLine("Your pet's name is: ");
             Console.WriteLine(PetName);
-            Console.WriteLine("and this pet is a " + PetSpecies);
+            Console.WriteLine("and this pet is a " + PetSpecies);*/
             Console.WriteLine("Press any key to return to the Main Menu.");
          
         }
@@ -120,6 +121,12 @@ namespace VirtualPet
             health += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
            
+        }
+
+        public override string ToString()
+        {
+            return PetName + PetSpecies + Hunger + Boredom + Health;
+            // Console.WriteLine($"{PetName} | {PetSpecies} | {Hunger} | {Boredom} | {Health}");
         }
     }
 }

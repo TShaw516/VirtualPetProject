@@ -9,6 +9,7 @@ namespace VirtualPet
         {
             string userSelection;
             FirstPet myPet = new FirstPet();
+            myPet.ToString();
             VirtualPetShelter myShelter = new VirtualPetShelter();
 
             do
