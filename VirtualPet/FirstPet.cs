@@ -6,7 +6,6 @@ namespace VirtualPet
 {
     public class FirstPet
     {
-        //Define Variables
         private string petName;
         private string petSpecies;
         private int hunger;

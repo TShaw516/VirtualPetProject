@@ -71,12 +71,5 @@ namespace VirtualPet.Tests
             myPet.TakeToDoctor();
             Assert.Equal(10, myPet.Health);
         }
-
-        //[Fact]
-        //public void Test_Title_TBD;
-
-            //Arrange
-            //Act
-            //Assert
     }
 }

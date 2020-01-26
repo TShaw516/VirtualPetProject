@@ -11,11 +11,6 @@ namespace VirtualPet
             FirstPet myPet = new FirstPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
 
-            ////do 
-            //{
-            //    Console.WriteLine("Please Press 1 to interact with a single pet or Press 2 to interact with all pets");
-            //}
-
             do
             {
                 myPet.PetMenu();
