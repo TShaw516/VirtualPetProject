@@ -94,21 +94,21 @@ namespace VirtualPet
 
         public void FeedPet()
         {
-            Console.WriteLine("You just fed your pet one bowl of food.");
+            Console.WriteLine("You just fed your pet(s) one bowl of food.");
             hunger -= 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
 
         public void PlayWithPet()
         {
-            Console.WriteLine("You just played with your pet!");
+            Console.WriteLine("You just played with your pet(s)!");
             boredom -= 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
 
         public void TakeToDoctor()
         {
-            Console.WriteLine("You took your pet to the vet, yay!");
+            Console.WriteLine("You took your pet(s) to the vet, yay!");
             health += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }

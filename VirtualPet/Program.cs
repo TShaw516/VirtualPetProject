@@ -37,26 +37,66 @@ namespace VirtualPet
                         break;
 
                     case "4":
-                        myShelter.FeedAllPets();
+                        Console.WriteLine("Please select a number from the following: ");
+                        Console.WriteLine("1- Feed single pet");
+                        Console.WriteLine("2- Feed all pets in shelter");
+                        userSelection = Console.ReadLine();
                         ScreenClear();
+
+                        switch (userSelection)
+                        {
+                            case "1":
+                                myPet.FeedPet();
+                                break;
+
+                            case "2":
+                                myShelter.FeedAllPets();
+                                break;
+                        }
                         break;
 
                     case "5":
-                        myShelter.PlayWithAllPets();
+                        Console.WriteLine("Please select a number from the following: ");
+                        Console.WriteLine("1- Play with a single pet");
+                        Console.WriteLine("2- Play with all pets in shelter");
+                        userSelection = Console.ReadLine();
                         ScreenClear();
+
+                        switch (userSelection)
+                        {
+                            case "1":
+                                myPet.PlayWithPet();
+                                break;
+
+                            case "2":
+                                myShelter.PlayWithAllPets();
+                                break;
+                        }
                         break;
 
                     case "6":
-                        myShelter.TakeAllPetsToDoctor();
+                        Console.WriteLine("Please select a number from the following: ");
+                        Console.WriteLine("1- Take one pet to the doctor");
+                        Console.WriteLine("2- Take all pets to the doctor");
+                        userSelection = Console.ReadLine();
                         ScreenClear();
+
+                        switch (userSelection)
+                        {
+                            case "1":
+                                myPet.TakeToDoctor();
+                                break;
+
+                            case "2":
+                                myShelter.TakeAllPetsToDoctor();
+                                break;
+                        }
                         break;
 
                     case "7":
                         exitGame = true;
                         break;
                 }
-                    
-
              } while (exitGame == false);
         }
 

@@ -42,6 +42,7 @@ namespace VirtualPet
             {
                 petsInShelter[i].FeedPet();
             }
+            
         }
 
         public void PlayWithAllPets()
