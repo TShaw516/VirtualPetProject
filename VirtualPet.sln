@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPet", "VirtualPet\VirtualPet.csproj", "{2BE303A3-C360-4733-8E3A-02683C300C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualPet", "VirtualPet\VirtualPet.csproj", "{2BE303A3-C360-4733-8E3A-02683C300C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPet.Tests", "VirtualPet.Tests\VirtualPet.Tests.csproj", "{F0388FB6-159D-4C7B-B48C-2EE15E3370BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualPet.Tests", "VirtualPet.Tests\VirtualPet.Tests.csproj", "{F0388FB6-159D-4C7B-B48C-2EE15E3370BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPetShelter.Tests", "VirtualPetShelter.Tests\VirtualPetShelter.Tests.csproj", "{B26CB080-C475-47C1-A59D-98395FCDCEFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F0388FB6-159D-4C7B-B48C-2EE15E3370BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0388FB6-159D-4C7B-B48C-2EE15E3370BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0388FB6-159D-4C7B-B48C-2EE15E3370BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B26CB080-C475-47C1-A59D-98395FCDCEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B26CB080-C475-47C1-A59D-98395FCDCEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B26CB080-C475-47C1-A59D-98395FCDCEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B26CB080-C475-47C1-A59D-98395FCDCEFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

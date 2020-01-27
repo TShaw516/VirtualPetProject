@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPet
 {
-    class VirtualPetShelter
+    public class VirtualPetShelter
     {
         List<FirstPet> petsInShelter = new List<FirstPet>();
         

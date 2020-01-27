@@ -72,11 +72,23 @@ namespace VirtualPet.Tests
             Assert.Equal(10, myPet.Health);
         }
 
-        //[Fact]
-        //public void Test_Title_TBD;
-
+        [Fact]
+        public void Feed_Reduces_AllPets_Hunger_By_10()
+        {
             //Arrange
+            VirtualPetShelter myShelter = new VirtualPetShelter();
+            myShelter.petsInShelter.Add(new FirstPet());
+            myShelter.petsInShelter.Add(new FirstPet());
+            myShelter.petsInShelter.Add(new FirstPet());
+
             //Act
+            myShelter.FeedAllPets();
+
+
             //Assert
+            Assert.Equal(0, myShelter.petsInShelter[0].Hunger);
+            Assert.Equal(0, myShelter.petsInShelter[1].Hunger);
+            Assert.Equal(0, myShelter.petsInShelter[2].Hunger);
+        }
     }
 }
