@@ -10,12 +10,8 @@ namespace VirtualPet
             string userSelection;
             FirstPet myPet = new FirstPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
-
-            ////do 
-            //{
-            //    Console.WriteLine("Please Press 1 to interact with a single pet or Press 2 to interact with all pets");
-            //}
-
+            bool exitGame = false;
+        
             do
             {
                 myPet.PetMenu();
@@ -54,8 +50,14 @@ namespace VirtualPet
                         myShelter.TakeAllPetsToDoctor();
                         ScreenClear();
                         break;
+
+                    case "7":
+                        exitGame = true;
+                        break;
                 }
-            } while (userSelection != "7");
+                    
+
+             } while (exitGame == false);
         }
 
         static void ScreenClear()
