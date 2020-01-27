@@ -6,7 +6,7 @@ namespace VirtualPet
 {
     public class VirtualPetShelter
     {
-        List<FirstPet> petsInShelter = new List<FirstPet>();
+        public List<FirstPet> petsInShelter = new List<FirstPet>();
         
 
         public VirtualPetShelter()

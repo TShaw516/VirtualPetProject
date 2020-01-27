@@ -86,9 +86,50 @@ namespace VirtualPet.Tests
 
 
             //Assert
-            Assert.Equal(0, myShelter.petsInShelter[0].Hunger);
-            Assert.Equal(0, myShelter.petsInShelter[1].Hunger);
-            Assert.Equal(0, myShelter.petsInShelter[2].Hunger);
+            Assert.Equal(-10, myShelter.petsInShelter[0].Hunger);
+            Assert.Equal(-10, myShelter.petsInShelter[1].Hunger);
+            Assert.Equal(-10, myShelter.petsInShelter[2].Hunger);
+
+        }
+
+        [Fact]
+        public void Play_Reduces_AllPets_Boredom_By_10()
+        {
+            //Arrange
+            VirtualPetShelter myShelter = new VirtualPetShelter();
+            myShelter.petsInShelter.Add(new FirstPet());
+            myShelter.petsInShelter.Add(new FirstPet());
+            myShelter.petsInShelter.Add(new FirstPet());
+
+            //Act
+            myShelter.PlayWithAllPets();
+
+
+            //Assert
+            Assert.Equal(-10, myShelter.petsInShelter[0].Boredom);
+            Assert.Equal(-10, myShelter.petsInShelter[1].Boredom);
+            Assert.Equal(-10, myShelter.petsInShelter[2].Boredom);
+
+        }
+
+        [Fact]
+        public void Take_All_Pets_To_Doctor_Increases_AllPets_Health_By_10()
+        {
+            //Arrange
+            VirtualPetShelter myShelter = new VirtualPetShelter();
+            myShelter.petsInShelter.Add(new FirstPet());
+            myShelter.petsInShelter.Add(new FirstPet());
+            myShelter.petsInShelter.Add(new FirstPet());
+
+            //Act
+            myShelter.TakeAllPetsToDoctor();
+
+
+            //Assert
+            Assert.Equal(20, myShelter.petsInShelter[0].Health);
+            Assert.Equal(20, myShelter.petsInShelter[1].Health);
+            Assert.Equal(20, myShelter.petsInShelter[2].Health);
+
         }
     }
-}
+    }
