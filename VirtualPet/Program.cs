@@ -9,6 +9,7 @@ namespace VirtualPet
         {
             string userSelection;
             OrganicPet myPet = new OrganicPet();
+            RoboticPet myRoboticPet = new RoboticPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
             bool exitGame = false;
       
@@ -20,12 +21,23 @@ namespace VirtualPet
                 switch (userSelection)
                 {
                     case "1":
-                        myPet = new OrganicPet();
-                        myPet.AddPet();
-                        myShelter.AddPetToShelter(myPet);
-                        ScreenClear();
-                        break;
+                        Console.WriteLine("Please Select whether you want to add an organic pet or a robotic pet: ");
+                        switch (userSelection)
+                        {  
+                            case "1":
+                                myPet = new OrganicPet();
+                                myPet.AddPet();
+                                myShelter.AddPetToShelter(myPet);
+                                ScreenClear();
+                                break;
 
+                            case "2":
+                                myRoboticPet = new RoboticPet();
+                                myRoboticPet.AddRoboticPet();
+                                myShelter.AddRoboticPetToShelter(myRoboticPet);
+                                ScreenClear();
+                                break;
+                        }
                     case "2":
                         myShelter.ListPetSelection();
                         myPet = myShelter.SelectPet();
