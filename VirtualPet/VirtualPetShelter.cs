@@ -47,6 +47,7 @@ namespace VirtualPet
             int userPetNumber = Convert.ToInt32(Console.ReadLine());
             int petId = (userPetNumber - 1);
             return petsInShelter[petId];
+          
             
         }
 

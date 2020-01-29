@@ -11,7 +11,7 @@ namespace VirtualPet
             FirstPet myPet = new FirstPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
             bool exitGame = false;
-        
+      
             do
             {
                 myPet.PetMenu();
@@ -28,7 +28,8 @@ namespace VirtualPet
 
                     case "2":
                         myShelter.ListPetSelection();
-                        myShelter.SelectPet();
+                        myPet = myShelter.SelectPet();
+                        Console.WriteLine($"You are now interacting with {myPet}");
                         break;
 
                     case "3":
