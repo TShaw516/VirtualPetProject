@@ -8,6 +8,7 @@ namespace VirtualPet
         public static void Main(string[] args)
         {
             string userSelection;
+            string userPetSelection;
             OrganicPet myPet = new OrganicPet();
             RoboticPet myRoboticPet = new RoboticPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
@@ -21,8 +22,13 @@ namespace VirtualPet
                 switch (userSelection)
                 {
                     case "1":
+                        
                         Console.WriteLine("Please Select whether you want to add an organic pet or a robotic pet: ");
-                        switch (userSelection)
+                        Console.WriteLine("1- Organic Pet");
+                        Console.WriteLine("2- Robotic Pet");
+                        userPetSelection = Console.ReadLine();
+
+                        switch (userPetSelection)
                         {  
                             case "1":
                                 myPet = new OrganicPet();
