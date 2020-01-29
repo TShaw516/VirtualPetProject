@@ -18,7 +18,7 @@ namespace VirtualPet
         {
             petsInShelter.Add(pet);
 
-        }    
+        }
 
         public void ShowAllPetsInfo()
         {
@@ -26,6 +26,12 @@ namespace VirtualPet
             {
                 petsInShelter[i].PetInfo();
             }
+        }
+
+        public void SelectPet()
+        {
+            ShowAllPetsInfo();
+            Console.WriteLine("Select the Pet that you would like to interact with:");
         }
 
         public void ShowAllPetsStatus()

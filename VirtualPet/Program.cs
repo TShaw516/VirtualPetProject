@@ -27,16 +27,21 @@ namespace VirtualPet
                         break;
 
                     case "2":
-                        myShelter.ShowAllPetsInfo();
+                        myShelter.SelectPet();
                         ScreenClear();
                         break;
 
                     case "3":
-                        myShelter.ShowAllPetsStatus();
+                        myShelter.ShowAllPetsInfo();
                         ScreenClear();
                         break;
 
                     case "4":
+                        myShelter.ShowAllPetsStatus();
+                        ScreenClear();
+                        break;
+
+                    case "5":
                         Console.WriteLine("Please select a number from the following: ");
                         Console.WriteLine("1- Feed single pet");
                         Console.WriteLine("2- Feed all pets in shelter");
@@ -55,7 +60,7 @@ namespace VirtualPet
                         }
                         break;
 
-                    case "5":
+                    case "6":
                         Console.WriteLine("Please select a number from the following: ");
                         Console.WriteLine("1- Play with a single pet");
                         Console.WriteLine("2- Play with all pets in shelter");
@@ -74,7 +79,7 @@ namespace VirtualPet
                         }
                         break;
 
-                    case "6":
+                    case "7":
                         Console.WriteLine("Please select a number from the following: ");
                         Console.WriteLine("1- Take one pet to the doctor");
                         Console.WriteLine("2- Take all pets to the doctor");
@@ -93,7 +98,7 @@ namespace VirtualPet
                         }
                         break;
 
-                    case "7":
+                    case "8":
                         exitGame = true;
                         break;
                 }
