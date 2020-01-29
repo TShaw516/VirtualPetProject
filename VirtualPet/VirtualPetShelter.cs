@@ -6,7 +6,7 @@ namespace VirtualPet
 {
     public class VirtualPetShelter
     {
-        public List<FirstPet> petsInShelter = new List<FirstPet>();
+        public List<OrganicPet> petsInShelter = new List<OrganicPet>();
         
 
         public VirtualPetShelter()
@@ -14,7 +14,7 @@ namespace VirtualPet
            
         }
 
-        public void AddPetToShelter(FirstPet pet)
+        public void AddPetToShelter(OrganicPet pet)
         {
             petsInShelter.Add(pet);
 
@@ -35,14 +35,14 @@ namespace VirtualPet
             petId = 1;
             Console.WriteLine("Select the pet you want to interact with!");
 
-            foreach(FirstPet myPet in petsInShelter)
+            foreach(OrganicPet myPet in petsInShelter)
             {
                 Console.WriteLine($"{petId}. {myPet.PetName} | {myPet.PetSpecies}");
                 petId++;
             }
         }
 
-        public FirstPet SelectPet()
+        public OrganicPet SelectPet()
         {
             int userPetNumber = Convert.ToInt32(Console.ReadLine());
             int petId = (userPetNumber - 1);

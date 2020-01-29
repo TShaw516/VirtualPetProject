@@ -4,38 +4,18 @@ using System.Text;
 
 namespace VirtualPet
 {
-    public class FirstPet
+    public class OrganicPet : Pet
     {
         //Define Variables
-        private string petName;
-        private string petSpecies;
         private int hunger;
-        private int boredom;
         private int health;
-
-        public string PetName
-        {
-            get { return this.petName; }
-            set { this.petName = value; }
-        }
-
-        public string PetSpecies
-        {
-            get { return this.petSpecies; }
-            set { this.petSpecies = value; }
-        }
-
+        
         public int Hunger
         {
             get { return this.hunger; }
             set { this.hunger = value; }
         }
 
-        public int Boredom
-        {
-            get { return this.boredom; }
-            set { this.boredom = value; }
-        }
 
         public int Health
         {
@@ -43,12 +23,10 @@ namespace VirtualPet
             set { this.health = value; }
         }
 
-        public FirstPet()
+        public OrganicPet()
         {
-            PetName = petName;
-            PetSpecies = petSpecies;
+
             Hunger = 0;
-            Boredom = 0;
             Health = 10;
         }
 
@@ -85,7 +63,7 @@ namespace VirtualPet
 
         public void ShelterContents()
         {
-            FirstPet petsInShelter = new FirstPet();
+            OrganicPet petsInShelter = new OrganicPet();
         }
 
         public void PetStatus()
@@ -100,19 +78,13 @@ namespace VirtualPet
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
 
-        public void PlayWithPet()
-        {
-            Console.WriteLine("You just played with your pet!");
-            boredom -= 10;
-            Console.WriteLine("Press any key to return to the Main Menu.");
-        }
-
         public void TakeToDoctor()
         {
             Console.WriteLine("You took your pet to the vet, yay!");
             health += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
+
     }
 }
 

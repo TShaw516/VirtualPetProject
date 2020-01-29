@@ -8,7 +8,7 @@ namespace VirtualPet
         public static void Main(string[] args)
         {
             string userSelection;
-            FirstPet myPet = new FirstPet();
+            OrganicPet myPet = new OrganicPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
             bool exitGame = false;
       
@@ -20,7 +20,7 @@ namespace VirtualPet
                 switch (userSelection)
                 {
                     case "1":
-                        myPet = new FirstPet();
+                        myPet = new OrganicPet();
                         myPet.AddPet();
                         myShelter.AddPetToShelter(myPet);
                         ScreenClear();
@@ -29,7 +29,7 @@ namespace VirtualPet
                     case "2":
                         myShelter.ListPetSelection();
                         myPet = myShelter.SelectPet();
-                        Console.WriteLine($"You are now interacting with {myPet}");
+                        Console.WriteLine($"You are now interacting with {myPet.PetName}");
                         break;
 
                     case "3":
