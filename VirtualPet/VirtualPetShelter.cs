@@ -28,10 +28,19 @@ namespace VirtualPet
             }
         }
 
+
         public void SelectPet()
         {
+            int petId;
+            petId = 1;
+            Console.WriteLine("Select the pet you want to interact with!");
+
+            foreach(FirstPet myPet in petsInShelter)
+            {
+                Console.WriteLine($"{petId}. {myPet.PetName} | {myPet.PetSpecies}");
+                petId++;
+            }
             ShowAllPetsInfo();
-            Console.WriteLine("Select the Pet that you would like to interact with:");
         }
 
         public void ShowAllPetsStatus()
@@ -67,5 +76,6 @@ namespace VirtualPet
                 petsInShelter[i].TakeToDoctor();
             }
         }
+
     }
 }
