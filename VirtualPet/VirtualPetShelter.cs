@@ -29,7 +29,7 @@ namespace VirtualPet
         }
 
 
-        public void SelectPet()
+        public void ListPetSelection()
         {
             int petId;
             petId = 1;
@@ -40,7 +40,14 @@ namespace VirtualPet
                 Console.WriteLine($"{petId}. {myPet.PetName} | {myPet.PetSpecies}");
                 petId++;
             }
-            ShowAllPetsInfo();
+        }
+
+        public FirstPet SelectPet()
+        {
+            int userPetNumber = Convert.ToInt32(Console.ReadLine());
+            int petId = (userPetNumber - 1);
+            return petsInShelter[petId];
+            
         }
 
         public void ShowAllPetsStatus()
@@ -76,6 +83,7 @@ namespace VirtualPet
                 petsInShelter[i].TakeToDoctor();
             }
         }
+
 
     }
 }

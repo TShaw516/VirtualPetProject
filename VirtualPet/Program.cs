@@ -27,8 +27,8 @@ namespace VirtualPet
                         break;
 
                     case "2":
+                        myShelter.ListPetSelection();
                         myShelter.SelectPet();
-                        ScreenClear();
                         break;
 
                     case "3":
@@ -107,7 +107,7 @@ namespace VirtualPet
 
         static void ScreenClear()
         {
-            Console.WriteLine("Press any key to return to the Main Menu!");
+            Console.WriteLine("Press any key to return to the Main Menu");
             Console.ReadKey();
             Console.Clear();
         }
