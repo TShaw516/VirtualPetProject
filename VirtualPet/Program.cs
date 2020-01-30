@@ -44,6 +44,7 @@ namespace VirtualPet
                                 ScreenClear();
                                 break;
                         }
+                        break;
                     case "2":
                         myShelter.ListPetSelection();
                         myPet = myShelter.SelectPet();

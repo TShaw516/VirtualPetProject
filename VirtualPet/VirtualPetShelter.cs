@@ -7,6 +7,7 @@ namespace VirtualPet
     public class VirtualPetShelter
     {
         public List<OrganicPet> petsInShelter = new List<OrganicPet>();
+        public List<RoboticPet> roboPetsInShelter = new List<RoboticPet>();
         
 
         public VirtualPetShelter()
@@ -18,6 +19,11 @@ namespace VirtualPet
         {
             petsInShelter.Add(pet);
 
+        }
+
+        public void AddRoboticPetToShelter(RoboticPet robopet)
+        {
+            roboPetsInShelter.Add(robopet);
         }
 
         public void ShowAllPetsInfo()

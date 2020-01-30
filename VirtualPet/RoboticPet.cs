@@ -31,6 +31,16 @@ namespace VirtualPet
         }
 
         //methods
+        public void AddRoboticPet()
+        {
+            Console.WriteLine("What is the new robotic pet's name?");
+            string nameInput = Console.ReadLine();
+            Console.WriteLine("What species is this pet?");
+            string speciesInput = Console.ReadLine();
+            PetName = nameInput;
+            PetSpecies = speciesInput;
+        }
+
         public void FeedPet()
         {
             Console.WriteLine("You just fed your pet one can of oil.");

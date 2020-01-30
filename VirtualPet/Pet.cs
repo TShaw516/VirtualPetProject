@@ -38,7 +38,21 @@ namespace VirtualPet
         }
 
         //Methods
-
+        public void PetMenu()
+        {
+            Console.WriteLine("Welcome to the Virtual Pet Shelter! What would you like to do?");
+            Console.WriteLine();
+            Console.WriteLine("Main Menu:");
+            Console.WriteLine("1- Add a Pet to the Shelter");
+            Console.WriteLine("2- Change Currently Selected Pet");
+            Console.WriteLine("3- View Pet Info");
+            Console.WriteLine("4- View Pet Status");
+            Console.WriteLine("5- Feed Pet");
+            Console.WriteLine("6- Play With Pet");
+            Console.WriteLine("7- Take Pet to Doctor");
+            Console.WriteLine("8- Quit");
+            Console.WriteLine("Select a number to perform an activity!");
+        }
 
         public void PlayWithPet()
         {
