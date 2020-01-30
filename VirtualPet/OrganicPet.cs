@@ -9,7 +9,8 @@ namespace VirtualPet
         //Define Variables
         private int hunger;
         private int health;
-        
+
+        OrganicPet organicPet = new OrganicPet();
         public int Hunger
         {
             get { return this.hunger; }
@@ -42,35 +43,24 @@ namespace VirtualPet
             PetSpecies = speciesInput;
         }
 
-        public void PetInfo()
-        {
-            Console.WriteLine($"Name: {PetName} | Species: {PetSpecies}");
-        }
-
-        public void ShelterContents()
-        {
-            OrganicPet petsInShelter = new OrganicPet();
-        }
-
-        public void PetStatus()
-        {
-            Console.WriteLine($"Pet Name: {PetName} | Hunger Level: {Hunger} | Boredom Level: {Boredom} | Health Level: {Health}");
-        }
-
-        public void FeedPet()
-        {
-            Console.WriteLine("You just fed your pet one bowl of food.");
-            hunger -= 10;
-            Console.WriteLine("Press any key to return to the Main Menu.");
-        }
-
-        public void TakeToDoctor()
+        public override void TakeToDoctor()
         {
             Console.WriteLine("You took your pet to the vet, yay!");
             health += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
 
+        public override void FeedPet()
+        {
+            Console.WriteLine("You just fed your pet one bowl of food.");
+            hunger -= 10;
+            Console.WriteLine("Press any key to return to the Main Menu.");
+        }
+
+        public override void PetStatus()
+        {
+            Console.WriteLine($"Pet Name: {PetName} | Hunger Level: {Hunger} | Boredom Level: {Boredom} | Health Level: {Health}");
+        }
     }
 }
 

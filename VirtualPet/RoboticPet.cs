@@ -41,18 +41,23 @@ namespace VirtualPet
             PetSpecies = speciesInput;
         }
 
-        public void FeedPet()
+        public override void TakeToDoctor()
         {
-            Console.WriteLine("You just fed your pet one can of oil.");
+            Console.WriteLine("You took your pet to the shop, yay!");
+            performanceLevel += 10;
+            Console.WriteLine("Press any key to return to the Main Menu.");
+        }
+
+        public override void FeedPet()
+        {
+            Console.WriteLine("You just fed your pet one pint of oil.");
             oilLevel += 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
 
-        public void TakeToDoctor()
+        public override void PetStatus()
         {
-            Console.WriteLine("You took your pet to the repairshop, yay!");
-            performanceLevel += 10;
-            Console.WriteLine("Press any key to return to the Main Menu.");
+            Console.WriteLine($"Pet Name: {PetName} | Oil Level: {oilLevel} | Boredom Level: {Boredom} | Performance Level: {performanceLevel}");
         }
     }
 }

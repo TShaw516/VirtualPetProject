@@ -60,5 +60,23 @@ namespace VirtualPet
             boredom -= 10;
             Console.WriteLine("Press any key to return to the Main Menu.");
         }
+
+        public void PetInfo()
+        {
+            Console.WriteLine($"Name: {PetName} | Species: {PetSpecies}");
+        }
+
+        public virtual void FeedPet()
+        {
+        }
+
+        public virtual void TakeToDoctor()
+        {
+        }
+
+        public virtual void PetStatus()
+        { 
+        }
+
     }
 }

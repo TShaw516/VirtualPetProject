@@ -46,6 +46,36 @@ namespace VirtualPet
                         }
                         break;
                     case "2":
+                        switch (userPetSelection)
+                        {
+                            case "1":
+                               
+                                int petId;
+                                petId = 1;
+                                Console.WriteLine("Select the organic pet you want to interact with!");
+
+                                foreach (Pet newPet in organicPetsInShelter)
+                                {
+                                    Console.WriteLine($"{petId}. {newPet.PetName} | {newPet.PetSpecies}");
+                                    petId++;
+                                }
+                                break;
+
+                            case "2":
+                               
+                                int roboPetId;
+                                roboPetId = 1;
+                                Console.WriteLine("Select the robotic pet you want to interact with!");
+
+                                foreach (RoboticPet roboPet in roboPetsInShelter)
+                                {
+                                    Console.WriteLine($"{roboPetId}. {roboPet.PetName} | {roboPet.PetSpecies}");
+                                    roboPetId++;
+                                }
+                                break;
+
+                        }
+                        
                         myShelter.ListPetSelection();
                         myPet = myShelter.SelectPet();
                         Console.WriteLine($"You are now interacting with {myPet.PetName}");
