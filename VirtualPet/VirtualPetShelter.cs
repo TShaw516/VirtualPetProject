@@ -15,15 +15,16 @@ namespace VirtualPet
            
         }
 
-        public void AddPetToShelter(Pet newPet)
+        public void AddOrganicPetToShelter(OrganicPet organicPet)
         {
-            petsInShelter.Add(newPet);
-
+            organicPetsInShelter.Add(organicPet);
+            petsInShelter.Add(organicPet);
         }
 
         public void AddRoboticPetToShelter(RoboticPet roboPet)
         {
             roboPetsInShelter.Add(roboPet);
+            petsInShelter.Add(roboPet);
         }
         
 
@@ -36,7 +37,7 @@ namespace VirtualPet
         }
 
 
-        public void ListPetSelection()
+        public void ListOrganicPetSelection()
         {
             int petId;
             petId = 1;
@@ -49,14 +50,33 @@ namespace VirtualPet
             }
         }
 
-        public Pet SelectPet()
+        public void ListRoboPetSelection()
+        {
+            int roboPetId;
+            roboPetId = 1;
+            Console.WriteLine("Select the pet you want to interact with!");
+
+            foreach (Pet roboPet in roboPetsInShelter)
+            {
+                Console.WriteLine($"{roboPetId}. {roboPet.PetName} | {roboPet.PetSpecies}");
+                roboPetId++;
+            }
+        }
+
+        public RoboticPet SelectRoboticPet()
         {
             int userPetNumber = Convert.ToInt32(Console.ReadLine());
-            int petId = (userPetNumber - 1);
-            return petsInShelter[petId];
-          
-            
+            int roboPetId = (userPetNumber - 1);
+            return roboPetsInShelter[roboPetId];
         }
+
+        public OrganicPet SelectOrganicPet()
+        {
+            int userPetNumber = Convert.ToInt32(Console.ReadLine());
+            int organicPetId = (userPetNumber - 1);
+            return organicPetsInShelter[organicPetId];
+        }
+
 
         public void ShowAllPetsStatus()
         {

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using VirtualPet;
 
 namespace VirtualPet
 {
     class Program
     {
+
         public static void Main(string[] args)
         {
             string userSelection;
@@ -33,7 +35,7 @@ namespace VirtualPet
                             case "1":
                                 myPet = new OrganicPet();
                                 myPet.AddPet();
-                                myShelter.AddPetToShelter(myPet);
+                                myShelter.AddOrganicPetToShelter(myPet);
                                 ScreenClear();
                                 break;
 
@@ -46,19 +48,27 @@ namespace VirtualPet
                         }
                         break;
                     case "2":
+
+                        Console.WriteLine("Please Select whether you want to select an organic pet or a robotic pet: ");
+                        Console.WriteLine("1- Organic Pet");
+                        Console.WriteLine("2- Robotic Pet");
+                        userPetSelection = Console.ReadLine();
                         switch (userPetSelection)
                         {
                             case "1":
-                               
+
                                 int petId;
                                 petId = 1;
                                 Console.WriteLine("Select the organic pet you want to interact with!");
 
-                                foreach (Pet newPet in organicPetsInShelter)
+                                foreach (OrganicPet organicPet in myShelter.organicPetsInShelter)
                                 {
-                                    Console.WriteLine($"{petId}. {newPet.PetName} | {newPet.PetSpecies}");
+                                    Console.WriteLine($"{petId}. {organicPet.PetName} | {organicPet.PetSpecies}");
                                     petId++;
                                 }
+                                myShelter.ListOrganicPetSelection();
+                                myPet = myShelter.SelectOrganicPet();
+                                Console.WriteLine($"You are now interacting with {myPet.PetName}");
                                 break;
 
                             case "2":
@@ -67,18 +77,18 @@ namespace VirtualPet
                                 roboPetId = 1;
                                 Console.WriteLine("Select the robotic pet you want to interact with!");
 
-                                foreach (RoboticPet roboPet in roboPetsInShelter)
+                                foreach (RoboticPet roboPet in myShelter.roboPetsInShelter)
                                 {
                                     Console.WriteLine($"{roboPetId}. {roboPet.PetName} | {roboPet.PetSpecies}");
                                     roboPetId++;
                                 }
+                                myShelter.ListRoboPetSelection();
+                                myRoboticPet = myShelter.SelectRoboticPet();
+                                Console.WriteLine($"You are now interacting with {myRoboticPet.PetName}");
                                 break;
 
                         }
-                        
-                        myShelter.ListPetSelection();
-                        myPet = myShelter.SelectPet();
-                        Console.WriteLine($"You are now interacting with {myPet.PetName}");
+                     
                         break;
 
                     case "3":
