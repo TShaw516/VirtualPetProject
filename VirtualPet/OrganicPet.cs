@@ -25,7 +25,6 @@ namespace VirtualPet
 
         public OrganicPet()
         {
-
             Hunger = 0;
             Health = 10;
         }

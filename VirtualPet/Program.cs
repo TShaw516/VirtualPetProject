@@ -54,18 +54,10 @@ namespace VirtualPet
                         break;
 
                     case "2":
-                        int petId;
-                        petId = 1;
-
-                        foreach (OrganicPet organicPet in myShelter.organicPetsInShelter)
-                        {
-                            Console.WriteLine($"{petId}. {organicPet.PetName} | {organicPet.PetSpecies}");
-                            petId++;
-                        }
-                        myShelter.ListOrganicPetSelection();
+                        myShelter.ListPetSelection();
                         myPet = myShelter.SelectPet();
-                        ScreenClear();
                         Console.WriteLine($"You are now interacting with {myPet.PetName}");
+                        ScreenClear();
                         break;
 
                     case "3":

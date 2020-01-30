@@ -40,7 +40,7 @@ namespace VirtualPet
         }
 
 
-        public void ListOrganicPetSelection()
+        public void ListPetSelection()
         {
             int petId;
             petId = 1;
@@ -65,13 +65,6 @@ namespace VirtualPet
                 roboPetId++;
             }
         }
-
-        /*public RoboticPet SelectRoboticPet()
-        {
-            int userPetNumber = Convert.ToInt32(Console.ReadLine());
-            int roboPetId = (userPetNumber - 1);
-            return roboPetsInShelter[roboPetId];
-        }*/
 
         public Pet SelectPet()
         {
@@ -100,24 +93,18 @@ namespace VirtualPet
 
         public void PlayWithAllPets()
         {
-            for (int i = 0; i < organicPetsInShelter.Count; i++)
+            for (int i = 0; i < petsInShelter.Count; i++)
             {
-                organicPetsInShelter[i].PlayWithPet();
+                petsInShelter[i].PlayWithPet();
             }
         }
 
         public void TakeAllPetsToDoctor()
         {
-            for (int i = 0; i < organicPetsInShelter.Count; i++)
+            for (int i = 0; i < petsInShelter.Count; i++)
             {
-                organicPetsInShelter[i].TakeToDoctor();
+                petsInShelter[i].TakeToDoctor();
             }
         }
-
-        public void ShelterContents()
-        {
-            OrganicPet petsInShelter = new OrganicPet();
-        }
-
     }
 }

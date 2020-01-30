@@ -73,7 +73,7 @@ namespace VirtualPet.Tests
         }
 
         [Fact]
-        public void Feed_Reduces_AllPets_Hunger_By_10()
+        public void Feed_Reduces_All_Organic_Pets_Hunger_By_10()
         {
             //Arrange
             VirtualPetShelter myShelter = new VirtualPetShelter();
@@ -83,13 +83,33 @@ namespace VirtualPet.Tests
 
             //Act
             myShelter.FeedAllPets();
-
+            var myList = myShelter.petsInShelter;
 
             //Assert
-            Assert.Equal(-10, myShelter.organicPetsInShelter[0].Hunger);
-            Assert.Equal(-10, myShelter.organicPetsInShelter[1].Hunger);
-            Assert.Equal(-10, myShelter.organicPetsInShelter[2].Hunger);
+            foreach (OrganicPet petList in myList)
+            {
+                Assert.Equal(-10, petList.Hunger);
+            }
+        }
 
+        [Fact]
+        public void Feed_Increases_All_Robotic_Pets_OilLevel_By_10()
+        {
+            //Arrange
+            VirtualPetShelter myShelter = new VirtualPetShelter();
+            myShelter.petsInShelter.Add(new RoboticPet());
+            myShelter.petsInShelter.Add(new RoboticPet());
+            myShelter.petsInShelter.Add(new RoboticPet());
+
+            //Act
+            myShelter.FeedAllPets();
+            var myList = myShelter.petsInShelter;
+
+            //Assert
+            foreach (RoboticPet petList in myList)
+            {
+                Assert.Equal(10, petList.OilLevel);
+            }
         }
 
         [Fact]

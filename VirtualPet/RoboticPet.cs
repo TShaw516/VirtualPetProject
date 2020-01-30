@@ -24,7 +24,7 @@ namespace VirtualPet
         }
 
         //Constructor
-        public RoboticPet()
+        public RoboticPet() : base()
         {
             OilLevel = 0;
             PerformanceLevel = 10;
