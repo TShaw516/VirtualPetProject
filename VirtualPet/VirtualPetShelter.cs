@@ -66,20 +66,19 @@ namespace VirtualPet
             }
         }
 
-        public RoboticPet SelectRoboticPet()
+        /*public RoboticPet SelectRoboticPet()
         {
             int userPetNumber = Convert.ToInt32(Console.ReadLine());
             int roboPetId = (userPetNumber - 1);
             return roboPetsInShelter[roboPetId];
-        }
+        }*/
 
-        public OrganicPet SelectOrganicPet()
+        public Pet SelectPet()
         {
             int userPetNumber = Convert.ToInt32(Console.ReadLine());
-            int organicPetId = (userPetNumber - 1);
-            return organicPetsInShelter[organicPetId];
+            int petId = (userPetNumber - 1);
+            return petsInShelter[petId];
         }
-
 
         public void ShowAllPetsStatus()
         {

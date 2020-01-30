@@ -52,48 +52,20 @@ namespace VirtualPet
                                 break;
                         }
                         break;
+
                     case "2":
+                        int petId;
+                        petId = 1;
 
-                        Console.WriteLine("Please Select whether you want to select an organic pet or a robotic pet: ");
-                        Console.WriteLine("1- Organic Pet");
-                        Console.WriteLine("2- Robotic Pet");
-                        userPetSelection = Console.ReadLine();
-                        switch (userPetSelection)
+                        foreach (OrganicPet organicPet in myShelter.organicPetsInShelter)
                         {
-                            case "1":
-
-                                int petId;
-                                petId = 1;
-                                Console.WriteLine("Select the organic pet you want to interact with!");
-
-                                foreach (OrganicPet organicPet in myShelter.organicPetsInShelter)
-                                {
-                                    Console.WriteLine($"{petId}. {organicPet.PetName} | {organicPet.PetSpecies}");
-                                    petId++;
-                                }
-                                myShelter.ListOrganicPetSelection();
-                                myOrganicPet = myShelter.SelectOrganicPet();
-                                Console.WriteLine($"You are now interacting with {myOrganicPet.PetName}");
-                                break;
-
-                            case "2":
-                               
-                                int roboPetId;
-                                roboPetId = 1;
-                                Console.WriteLine("Select the robotic pet you want to interact with!");
-
-                                foreach (RoboticPet roboPet in myShelter.roboPetsInShelter)
-                                {
-                                    Console.WriteLine($"{roboPetId}. {roboPet.PetName} | {roboPet.PetSpecies}");
-                                    roboPetId++;
-                                }
-                                myShelter.ListRoboPetSelection();
-                                myRoboticPet = myShelter.SelectRoboticPet();
-                                Console.WriteLine($"You are now interacting with {myRoboticPet.PetName}");
-                                break;
-
+                            Console.WriteLine($"{petId}. {organicPet.PetName} | {organicPet.PetSpecies}");
+                            petId++;
                         }
-                     
+                        myShelter.ListOrganicPetSelection();
+                        myPet = myShelter.SelectPet();
+                        ScreenClear();
+                        Console.WriteLine($"You are now interacting with {myPet.PetName}");
                         break;
 
                     case "3":
