@@ -10,7 +10,6 @@ namespace VirtualPet
         private int hunger;
         private int health;
 
-        OrganicPet organicPet = new OrganicPet();
         public int Hunger
         {
             get { return this.hunger; }

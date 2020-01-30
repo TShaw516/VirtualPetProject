@@ -116,7 +116,7 @@ namespace VirtualPet
                         switch (userSelection)
                         {
                             case "1":
-                                myOrganicPet.FeedPet();
+                                myPet.FeedPet();
                                 break;
 
                             case "2":
@@ -135,7 +135,7 @@ namespace VirtualPet
                         switch (userSelection)
                         {
                             case "1":
-                                myOrganicPet.PlayWithPet();
+                                myPet.PlayWithPet();
                                 break;
 
                             case "2":
@@ -154,7 +154,7 @@ namespace VirtualPet
                         switch (userSelection)
                         {
                             case "1":
-                                myOrganicPet.TakeToDoctor();
+                                myPet.TakeToDoctor();
                                 break;
 
                             case "2":
