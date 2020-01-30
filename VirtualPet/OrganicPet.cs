@@ -31,18 +31,6 @@ namespace VirtualPet
             Health = 10;
         }
 
-
-
-        public void AddPet()
-        {
-            Console.WriteLine("What is the new pet's name?");
-            string nameInput = Console.ReadLine();
-            Console.WriteLine("What species is this pet?");
-            string speciesInput = Console.ReadLine();
-            PetName = nameInput;
-            PetSpecies = speciesInput;
-        }
-
         public override void TakeToDoctor()
         {
             Console.WriteLine("You took your pet to the vet, yay!");

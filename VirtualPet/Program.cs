@@ -11,14 +11,15 @@ namespace VirtualPet
         {
             string userSelection;
             string userPetSelection;
-            OrganicPet myPet = new OrganicPet();
+            Pet myPet = new Pet();
+            OrganicPet myOrganicPet = new OrganicPet();
             RoboticPet myRoboticPet = new RoboticPet();
             VirtualPetShelter myShelter = new VirtualPetShelter();
             bool exitGame = false;
       
             do
             {
-                myPet.PetMenu();
+                myOrganicPet.PetMenu();
                 userSelection = Console.ReadLine();
 
                 switch (userSelection)
@@ -35,14 +36,18 @@ namespace VirtualPet
                             case "1":
                                 myPet = new OrganicPet();
                                 myPet.AddPet();
-                                myShelter.AddOrganicPetToShelter(myPet);
+                                myShelter.AddPetToShelter(myPet);
+
                                 ScreenClear();
                                 break;
 
                             case "2":
-                                myRoboticPet = new RoboticPet();
+                                myPet = new RoboticPet();
+                                myPet.AddPet();
+                                myShelter.AddPetToShelter(myPet);
+                                /*myRoboticPet = new RoboticPet();
                                 myRoboticPet.AddRoboticPet();
-                                myShelter.AddRoboticPetToShelter(myRoboticPet);
+                                myShelter.AddRoboticPetToShelter(myRoboticPet);*/
                                 ScreenClear();
                                 break;
                         }
@@ -67,8 +72,8 @@ namespace VirtualPet
                                     petId++;
                                 }
                                 myShelter.ListOrganicPetSelection();
-                                myPet = myShelter.SelectOrganicPet();
-                                Console.WriteLine($"You are now interacting with {myPet.PetName}");
+                                myOrganicPet = myShelter.SelectOrganicPet();
+                                Console.WriteLine($"You are now interacting with {myOrganicPet.PetName}");
                                 break;
 
                             case "2":
@@ -111,7 +116,7 @@ namespace VirtualPet
                         switch (userSelection)
                         {
                             case "1":
-                                myPet.FeedPet();
+                                myOrganicPet.FeedPet();
                                 break;
 
                             case "2":
@@ -130,7 +135,7 @@ namespace VirtualPet
                         switch (userSelection)
                         {
                             case "1":
-                                myPet.PlayWithPet();
+                                myOrganicPet.PlayWithPet();
                                 break;
 
                             case "2":
@@ -149,7 +154,7 @@ namespace VirtualPet
                         switch (userSelection)
                         {
                             case "1":
-                                myPet.TakeToDoctor();
+                                myOrganicPet.TakeToDoctor();
                                 break;
 
                             case "2":

@@ -54,6 +54,17 @@ namespace VirtualPet
             Console.WriteLine("Select a number to perform an activity!");
         }
 
+        public void AddPet()
+        {
+            Console.WriteLine("What is the new pet's name?");
+            string nameInput = Console.ReadLine();
+            Console.WriteLine("What species is this pet?");
+            string speciesInput = Console.ReadLine();
+            PetName = nameInput;
+            PetSpecies = speciesInput;
+        }
+
+
         public void PlayWithPet()
         {
             Console.WriteLine("You just played with your pet!");

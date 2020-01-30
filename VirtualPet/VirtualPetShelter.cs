@@ -18,13 +18,16 @@ namespace VirtualPet
         public void AddOrganicPetToShelter(OrganicPet organicPet)
         {
             organicPetsInShelter.Add(organicPet);
-            petsInShelter.Add(organicPet);
         }
 
         public void AddRoboticPetToShelter(RoboticPet roboPet)
         {
             roboPetsInShelter.Add(roboPet);
-            petsInShelter.Add(roboPet);
+        }
+
+        public void AddPetToShelter(Pet pet)
+        {
+            petsInShelter.Add(pet);
         }
         
 
